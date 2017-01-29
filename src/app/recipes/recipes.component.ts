@@ -6,7 +6,7 @@ import {Recipe} from "./recipe";
   templateUrl: './recipes.component.html',
 })
 export class RecipesComponent implements OnInit {
-  recipes: Recipe[] = [];
+  selectedRecipe: Recipe;
 
   constructor() { }
 
