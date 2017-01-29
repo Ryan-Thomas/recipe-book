@@ -1,0 +1,14 @@
+<!-- Output individual list items -->
+<div class="row">
+  <div class="col-xs-12">
+    <a class="btn btn-success">New Recipe</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <!-- Pass through the bound property [recipe] -->
+      <rb-recipe-item [recipe]="recipe"></rb-recipe-item>
+    </ul>
+  </div>
+</div>
