@@ -1,6 +1,6 @@
 import {Ingredient} from "../shared/ingredient";
 export class ShoppingListService {
-  private items: Ingredient[];
+  private items: Ingredient[] = [];
 
   constructor() { }
 
@@ -9,6 +9,7 @@ export class ShoppingListService {
   }
 
   addItems(items: Ingredient[]) {
+    console.log('this.items', this.items); // debug
     Array.prototype.push.apply(this.items, items);
   }
 }
