@@ -18,11 +18,11 @@ export class RecipeService {
     return this.recipes;
   }
 
-  getRecipe(recipeIndex: number): Recipe {
-    throw new Error("Not yet implemented");
+  getRecipe(id: number): Recipe {
+    return this.recipes[id];
   }
 
-  deleteRecipe(selectedRecipe: Recipe) {
-
+  deleteRecipe(recipe: Recipe) {
+    this.recipes.splice(this.recipes.indexOf(recipe), 1);
   }
 }
