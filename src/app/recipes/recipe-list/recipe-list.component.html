@@ -8,8 +8,9 @@
   <div class="col-xs-12">
     <ul class="list-group">
       <!-- Pass through the bound property [recipe] -->
-      <rb-recipe-item *ngFor="let recipe of recipes"
-                      [recipe]="recipe">
+      <rb-recipe-item *ngFor="let recipe of recipes; let i = index"
+                      [recipe]="recipe"
+                      [recipeId]="i">
       </rb-recipe-item>
     </ul>
   </div>
