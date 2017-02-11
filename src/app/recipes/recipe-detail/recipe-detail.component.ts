@@ -22,9 +22,9 @@ export class RecipeDetailComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.subscription = this.route.params.subscribe(
       (params: any) => {
-        console.log('params', params); // debug
+        // console.log('params', params); // debug
         this.recipeIndex = params['id'];
-        console.log('this.recipeIndex', ); // debug
+        // console.log('this.recipeIndex', ); // debug
         this.selectedRecipe = this.recipesService.getRecipe(this.recipeIndex);
       }
     );

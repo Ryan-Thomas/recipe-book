@@ -15,6 +15,7 @@ export class ShoppingListAddComponent implements OnChanges {
 
   // Fired whenever the input changes (Whenever the user selects a new item)
   ngOnChanges(changes) {
+    console.log('changes', changes);
     if (changes.item.currentValue === null) {
       this.isAdd = true;
       this.item = {name: null, amount: null};
@@ -24,10 +25,11 @@ export class ShoppingListAddComponent implements OnChanges {
   }
 
   onSubmit(ingredient: Ingredient) {
+    const newIngredient = new Ingredient(ingredient.name, ingredient.amount);
     if (!this.isAdd) {
-      // Edit
+      this.sls.editItem(this.item, newIngredient);
     } else {
-      this.item = new Ingredient(ingredient.name, ingredient.amount);
+      this.item = newIngredient;
       this.sls.addItem(this.item);
     }
   }
